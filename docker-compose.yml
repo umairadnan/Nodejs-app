@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    # Step 1: Build the Docker image using the Dockerfile in the current directory
+    build:
+      context: .
+    # Step 2: Set a container name for easier management
+    container_name: nodejs-app
+    # Step 3: Map ports (host:container) to access the app locally
+    ports:
+      - "3000:3000"
+    # Step 4: Automatically restart the container if it stops
+    restart: always
+    # Step 5: Mount volumes (optional, for live code updates in development)
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
