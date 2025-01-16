@@ -6,7 +6,7 @@ services:
     build:
       context: .
     # Step 2: Set a container name for easier management
-    container_name: nodejs-app
+    container_name: nodejs-app1
     # Step 3: Map ports (host:container) to access the app locally
     ports:
       - "3000:3000"
